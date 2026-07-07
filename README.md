@@ -30,3 +30,7 @@ npm start
 ```
 
 Generated folders such as `.venv`, `frontend/node_modules`, and `frontend/build` are intentionally ignored.
+
+## Vercel
+
+This repo includes `vercel.json` and a small `/api` Python function so Vercel can deploy the React app and keep `/pipelines/parse` working in production.
