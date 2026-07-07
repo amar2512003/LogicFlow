@@ -10,6 +10,12 @@ Compact React + FastAPI implementation for the VectorShift frontend assessment.
 
 The script installs missing dependencies, starts FastAPI on `127.0.0.1:8000`, and starts React on `localhost:3000`.
 
+For tools that expect root npm scripts:
+
+```bash
+npm run dev
+```
+
 ## Manual Setup
 
 Backend:
