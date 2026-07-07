@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@600;700&display=swap');
+
+:root { color: #172033; background: #f4f6fb; font-family: 'DM Sans', sans-serif; }
+* { box-sizing: border-box; }
+body { margin: 0; min-width: 980px; }
+button, input, select, textarea { font: inherit; }
+.app-shell { min-height: 100vh; background: radial-gradient(circle at 15% -10%, #ede9fe 0, transparent 28%), #f5f7fb; }
+.app-header { height: 76px; padding: 0 32px; display: flex; align-items: center; gap: 12px; background: rgba(255,255,255,.86); border-bottom: 1px solid #e7eaf2; backdrop-filter: blur(16px); }
+.brand-mark { display: grid; place-items: center; width: 38px; height: 38px; border-radius: 12px; color: white; font-family: 'Space Grotesk'; background: linear-gradient(145deg, #8468ff, #5c36df); box-shadow: 0 8px 22px #7258e94d; }
+.app-header h1 { margin: 0; font: 700 16px/1.2 'Space Grotesk'; }
+.app-header p { margin: 2px 0 0; color: #8b94a7; font-size: 11px; letter-spacing: .08em; text-transform: uppercase; }
+.status-pill { margin-left: auto; display: flex; align-items: center; gap: 7px; padding: 7px 11px; border: 1px solid #e7eaf2; border-radius: 99px; color: #667085; font-size: 12px; background: #fff; }
+.status-pill i { width: 7px; height: 7px; border-radius: 50%; background: #22c55e; box-shadow: 0 0 0 3px #dcfce7; }
+main { padding: 24px 28px 30px; }
+.toolbar-section, .canvas-card { max-width: 1500px; margin: 0 auto; }
+.section-title { display: flex; align-items: flex-end; justify-content: space-between; margin-bottom: 14px; }
+.section-title div { display: flex; flex-direction: column; gap: 3px; }
+.section-title span { font: 700 15px 'Space Grotesk'; }
+.section-title small { color: #8b94a7; font-size: 12px; }
+.section-title .node-count { padding: 5px 9px; border-radius: 99px; color: #7258e9; background: #eeeafe; font: 600 11px 'DM Sans'; }
+.node-library { display: grid; grid-template-columns: repeat(9, minmax(92px, 1fr)); gap: 10px; margin-bottom: 20px; }
+.draggable-node { cursor: grab; height: 74px; display: flex; align-items: center; justify-content: center; flex-direction: column; gap: 6px; border: 1px solid #e3e7ef; border-radius: 13px; color: #515b70; background: rgba(255,255,255,.88); font-size: 11px; font-weight: 600; box-shadow: 0 4px 12px #25324a0a; transition: .18s ease; }
+.draggable-node:hover { color: #6448d9; border-color: #c9bfff; transform: translateY(-2px); box-shadow: 0 8px 20px #6448d91c; }
+.drag-icon { display: grid; place-items: center; min-width: 30px; height: 27px; padding: 0 5px; border-radius: 8px; color: #6e54dc; background: #f0edff; font-size: 9px; font-weight: 700; }
+.canvas-card { overflow: hidden; border: 1px solid #e2e6ef; border-radius: 18px; background: #fff; box-shadow: 0 20px 45px #26324b12; }
+.pipeline-canvas { width: 100%; height: calc(100vh - 305px); min-height: 420px; }
+.react-flow__controls { overflow: hidden; border: 1px solid #e2e6ef !important; border-radius: 10px !important; box-shadow: 0 6px 15px #26324b12 !important; }
+.react-flow__controls-button { border-color: #eef0f5 !important; }
+.react-flow__minimap { overflow: hidden; border: 1px solid #e2e6ef; border-radius: 10px; box-shadow: 0 6px 15px #26324b12; }
+.pipeline-node { position: relative; width: 250px; min-height: 140px; padding: 15px; border: 1px solid #e1e5ee; border-top: 3px solid var(--node-accent); border-radius: 13px; background: rgba(255,255,255,.97); box-shadow: 0 8px 24px #26324b18; transition: border-color .18s, box-shadow .18s; }
+.pipeline-node:hover { border-color: color-mix(in srgb, var(--node-accent) 42%, #e1e5ee); box-shadow: 0 12px 30px #26324b24; }
+.node-heading { display: flex; align-items: center; gap: 10px; margin-bottom: 14px; }
+.node-icon { display: grid; place-items: center; min-width: 34px; height: 32px; padding: 0 5px; border-radius: 9px; color: var(--node-accent); background: color-mix(in srgb, var(--node-accent) 11%, white); font-size: 9px; font-weight: 800; }
+.node-heading div:last-child { display: flex; flex-direction: column; gap: 1px; }
+.node-heading strong { font: 700 13px 'Space Grotesk'; }
+.node-heading span { color: #98a0b1; font-size: 10px; }
+.node-content { display: flex; flex-direction: column; gap: 9px; }
+.node-field { display: flex; flex-direction: column; gap: 4px; color: #7d879b; font-size: 9px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; }
+.node-field input, .node-field select, .node-content textarea { width: 100%; border: 1px solid #e2e6ef; border-radius: 7px; outline: none; color: #3d4658; background: #f8f9fc; font-size: 11px; text-transform: none; transition: .15s; }
+.node-field input, .node-field select { height: 29px; padding: 0 8px; }
+.node-content textarea { min-height: 72px; padding: 8px; resize: none; line-height: 1.45; }
+.node-field input:focus, .node-field select:focus, .node-content textarea:focus { border-color: var(--node-accent); background: #fff; box-shadow: 0 0 0 3px color-mix(in srgb, var(--node-accent) 12%, transparent); }
+.node-handle { width: 9px !important; height: 9px !important; border: 2px solid #fff !important; background: var(--node-accent) !important; box-shadow: 0 0 0 1px var(--node-accent); }
+.text-node { transition: width .16s ease, height .16s ease, border-color .18s, box-shadow .18s; }
+.handle-label { position: absolute; left: 10px; z-index: 2; padding: 1px 4px; transform: translateY(-50%); border-radius: 4px; color: #be185d; background: #fff1f7; font: 600 9px monospace; pointer-events: none; }
+.submit-bar { min-height: 76px; padding: 14px 18px; display: flex; align-items: center; gap: 16px; border-top: 1px solid #e7eaf2; background: #fff; }
+.submit-bar div { display: flex; flex-direction: column; gap: 2px; }
+.submit-bar strong { font: 700 12px 'Space Grotesk'; }
+.submit-bar div span { color: #98a0b1; font-size: 10px; }
+.submit-bar button { margin-left: auto; padding: 10px 15px; border: 0; border-radius: 9px; color: #fff; background: linear-gradient(135deg, #8063ef, #6242d6); font-size: 11px; font-weight: 700; box-shadow: 0 7px 16px #6c4de442; cursor: pointer; }
+.submit-bar button:disabled { opacity: .65; cursor: wait; }
+.submit-bar button span { margin-left: 8px; font-size: 15px; }
