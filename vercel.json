@@ -4,12 +4,24 @@
   "buildCommand": "DANGEROUSLY_DISABLE_HOST_CHECK=true npm run build",
   "outputDirectory": "frontend/build",
   "env": {
-    "DANGEROUSLY_DISABLE_HOST_CHECK": "true"
+    "DANGEROUSLY_DISABLE_HOST_CHECK": "true",
+    "NODE_ENV": "production"
+  },
+  "functions": {
+    "api/**/*.py": {
+      "runtime": "python3.11"
+    }
   },
   "rewrites": [
     {
       "source": "/pipelines/parse",
-      "destination": "/api/pipelines/parse"
+      "destination": "/api/pipelines/parse.py"
+    }
+  ],
+  "routes": [
+    {
+      "src": "^/(?!api/).*",
+      "dest": "/index.html"
     }
   ]
 }
