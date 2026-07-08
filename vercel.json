@@ -1,12 +1,8 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "installCommand": "npm run install:frontend",
-  "buildCommand": "DANGEROUSLY_DISABLE_HOST_CHECK=true npm run build",
+  "buildCommand": "npm run build",
   "outputDirectory": "frontend/build",
-  "env": {
-    "DANGEROUSLY_DISABLE_HOST_CHECK": "true",
-    "NODE_ENV": "production"
-  },
   "functions": {
     "api/**/*.py": {
       "runtime": "python3.11"

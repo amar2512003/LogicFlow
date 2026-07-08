@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "dev": "npm --prefix frontend start",
-    "start": "npm --prefix frontend start",
-    "build": "npm --prefix frontend run build",
+    "dev": "DANGEROUSLY_DISABLE_HOST_CHECK=true npm --prefix frontend start",
+    "start": "DANGEROUSLY_DISABLE_HOST_CHECK=true npm --prefix frontend start",
+    "build": "DANGEROUSLY_DISABLE_HOST_CHECK=true npm --prefix frontend run build",
     "install:frontend": "npm --prefix frontend install",
     "postinstall": "npm run install:frontend"
   }
