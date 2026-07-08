@@ -1,8 +1,11 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "installCommand": "npm run install:frontend",
-  "buildCommand": "npm run build",
+  "buildCommand": "DANGEROUSLY_DISABLE_HOST_CHECK=true npm run build",
   "outputDirectory": "frontend/build",
+  "env": {
+    "DANGEROUSLY_DISABLE_HOST_CHECK": "true"
+  },
   "rewrites": [
     {
       "source": "/pipelines/parse",
